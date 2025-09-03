@@ -4,7 +4,8 @@
   "scripts": {
     "build": "turbo run build",
     "clean": "turbo run clean",
-    "demo": "turbo run dev --filter='@copilotkitnext/angular-demo-server' --filter='@copilotkitnext/angular-demo'",
+    "dev": "turbo run dev --filter='server' --filter='frontend' --filter='agent'",
+    "dev:agent": "cd apps/agent && npx @langchain/langgraph-cli dev --port 8123 --no-browser",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",

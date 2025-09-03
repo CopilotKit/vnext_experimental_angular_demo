@@ -6,10 +6,17 @@ import {
   createCopilotEndpoint,
   InMemoryAgentRunner,
 } from "@copilotkitnext/runtime";
-import { OpenAIAgent } from "./openai";
+import { LangGraphAgent } from "@ag-ui/langgraph";
 
 const runtime = new CopilotRuntime({
-  agents: { default: new OpenAIAgent() },
+  agents: {
+    // @ts-ignore
+    default: new LangGraphAgent({
+      deploymentUrl: "http://localhost:8123",
+      graphId: "starterAgent",
+      langsmithApiKey: "",
+    }),
+  },
   runner: new InMemoryAgentRunner(),
 });
 
