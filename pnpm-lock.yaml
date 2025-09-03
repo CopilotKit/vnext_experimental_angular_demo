@@ -125,11 +125,11 @@ importers:
         specifier: 0.0.36-alpha.1
         version: 0.0.36-alpha.1
       '@ag-ui/langgraph':
-        specifier: ^0.0.11
-        version: 0.0.11(openai@5.18.1(ws@8.18.3)(zod@3.25.75))
+        specifier: 0.0.12-alpha.0
+        version: 0.0.12-alpha.0(openai@5.18.1(ws@8.18.3)(zod@3.25.75))
       '@copilotkitnext/runtime':
-        specifier: 0.0.1
-        version: 0.0.1(better-sqlite3@12.2.0)(openai@5.18.1(ws@8.18.3)(zod@3.25.75))
+        specifier: 0.0.2
+        version: 0.0.2(better-sqlite3@12.2.0)(openai@5.18.1(ws@8.18.3)(zod@3.25.75))
       '@hono/node-server':
         specifier: ^1.13.6
         version: 1.19.0(hono@4.8.10)
@@ -173,8 +173,8 @@ packages:
   '@ag-ui/encoder@0.0.36-alpha.1':
     resolution: {integrity: sha512-jkWbwWkEz/iIdmam/WaX+v83KklhGowSGmuIKvgBYhFYPrxNP7UQPKEfJWqR8PCde0i8TuNlcUJEWPJdw/P2Hw==}
 
-  '@ag-ui/langgraph@0.0.11':
-    resolution: {integrity: sha512-3xUkaOelnpQ5tbsbuoOTin71tTgWEN0GDZBjGs/7xAwly2Dn4fahbBAoscXullO/pH9kTGGgbuJ0rWDUgo6fKQ==}
+  '@ag-ui/langgraph@0.0.12-alpha.0':
+    resolution: {integrity: sha512-YzM0mSgUeTGrs5Y4XASwiENdx4iB3zsFexX/4ZZLN/e4IaHOwJdFobWWCEQpeBGkV+zXhuBb80DNRGXddWVRiw==}
 
   '@ag-ui/proto@0.0.36':
     resolution: {integrity: sha512-yaWLwJQmBaCtFstSoZEALztVckCYv+RD8guU91kL5AvywRXvZPP5mjiN+bEwvtw8VU3idXoee1ZbJGpSlSAQ8A==}
@@ -933,8 +933,8 @@ packages:
     resolution: {integrity: sha512-6JeSVPu5D7r/qLTf2OePCqL4xY4UK5UyZbFMjoaXWGRC+OICn6vN+KRI7+Eil2ndaQApOqJ07W+NCADVtYjggQ==}
     engines: {node: '>=18'}
 
-  '@copilotkitnext/runtime@0.0.1':
-    resolution: {integrity: sha512-uKB6v7vpCIIglLwI7a6Wb3nrbhL1jhC//SnWJ/MPJZcmoRLnHimlMlkr0HAT+JOK+XhC0TvL+u8+n4UVHVjMvA==}
+  '@copilotkitnext/runtime@0.0.2':
+    resolution: {integrity: sha512-0QIVrDShbeeyOvWIklZiJIavamEZpfd7E5+HMr5QjHLu8j7EOBv7xUK/1UtFTbBPP6lOekayg/ISSClBK1z9Uw==}
     engines: {node: '>=18'}
     peerDependencies:
       better-sqlite3: ^12.2.0
@@ -945,6 +945,10 @@ packages:
 
   '@copilotkitnext/shared@0.0.1':
     resolution: {integrity: sha512-4CvsGdLpFQ8mjhhKgh3PKT4NAGqxFg2LcNxGTUsj3rlht2F4i6OmHya4Y/hRAe7OmJ12NJz1MULY7xjKoRIgGw==}
+    engines: {node: '>=18'}
+
+  '@copilotkitnext/shared@0.0.2':
+    resolution: {integrity: sha512-jxz7DR8PKEvb3JeJ9rILiMaXTqRJE6rko7RdtM2l3rApk5J1GzgREV0Kkjo74sBbKzS5dO60yMr3FWPpG/sOfQ==}
     engines: {node: '>=18'}
 
   '@discoveryjs/json-ext@0.6.3':
@@ -5727,7 +5731,7 @@ snapshots:
       '@ag-ui/core': 0.0.36-alpha.1
       '@ag-ui/proto': 0.0.36-alpha.1
 
-  '@ag-ui/langgraph@0.0.11(openai@5.18.1(ws@8.18.3)(zod@3.25.75))':
+  '@ag-ui/langgraph@0.0.12-alpha.0(openai@5.18.1(ws@8.18.3)(zod@3.25.75))':
     dependencies:
       '@ag-ui/client': 0.0.36
       '@langchain/core': 0.3.73(openai@5.18.1(ws@8.18.3)(zod@3.25.75))
@@ -6835,12 +6839,12 @@ snapshots:
       rxjs: 7.8.1
       zod: 3.25.75
 
-  '@copilotkitnext/runtime@0.0.1(better-sqlite3@12.2.0)(openai@5.18.1(ws@8.18.3)(zod@3.25.75))':
+  '@copilotkitnext/runtime@0.0.2(better-sqlite3@12.2.0)(openai@5.18.1(ws@8.18.3)(zod@3.25.75))':
     dependencies:
       '@ag-ui/client': 0.0.36-alpha.1
       '@ag-ui/core': 0.0.36-alpha.1
       '@ag-ui/encoder': 0.0.36-alpha.1
-      '@copilotkitnext/shared': 0.0.1
+      '@copilotkitnext/shared': 0.0.2
       hono: 4.8.10
       ioredis: 5.7.0
       kysely: 0.28.5
@@ -6852,6 +6856,11 @@ snapshots:
       - supports-color
 
   '@copilotkitnext/shared@0.0.1':
+    dependencies:
+      partial-json: 0.1.7
+      uuid: 11.1.0
+
+  '@copilotkitnext/shared@0.0.2':
     dependencies:
       partial-json: 0.1.7
       uuid: 11.1.0
