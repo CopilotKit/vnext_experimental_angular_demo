@@ -13,17 +13,19 @@ import { ChatOpenAI } from "@langchain/openai";
 import { convertActionsToDynamicStructuredTools } from "@copilotkit/sdk-js/langgraph";
 import { BaseMessage } from "@langchain/core/messages";
 import { Annotation } from "@langchain/langgraph";
+import { CopilotKitStateAnnotation } from "@copilotkit/sdk-js/langgraph";
 
 // 1. Define our agent state, which includes CopilotKit state to
 //    provide actions to the state.
 const AgentStateAnnotation = Annotation.Root({
-  // Define a 'messages' channel to store an array of BaseMessage objects
-  messages: Annotation<BaseMessage[]>({
-    // Reducer function: Combines the current state with new messages
-    reducer: (currentState, updateValue) => currentState.concat(updateValue),
-    // Default function: Initialize the channel with an empty array
-    default: () => [],
-  }),
+  // // Define a 'messages' channel to store an array of BaseMessage objects
+  // messages: Annotation<BaseMessage[]>({
+  //   // Reducer function: Combines the current state with new messages
+  //   reducer: (currentState, updateValue) => currentState.concat(updateValue),
+  //   // Default function: Initialize the channel with an empty array
+  //   default: () => [],
+  // }),
+  ...CopilotKitStateAnnotation.spec,
   proverbs: Annotation<string[]>,
   tools: Annotation<any[]>, // ag-ui tools will be added here
 });
@@ -55,12 +57,10 @@ async function chat_node(state: AgentState, config: RunnableConfig) {
 
   // 5.2 Bind the tools to the model, include CopilotKit actions. This allows
   //     the model to call tools that are defined in CopilotKit by the frontend.
-  const modelWithTools = model.bindTools!(
-    [
-      ...convertActionsToDynamicStructuredTools(state.tools || []),
-      ...tools,
-    ],
-  );
+  const modelWithTools = model.bindTools!([
+    ...convertActionsToDynamicStructuredTools(state.tools || []),
+    ...tools,
+  ]);
 
   // 5.3 Define the system message, which will be used to guide the model, in this case
   //     we also add in the language to use from the state.
@@ -92,7 +92,7 @@ function shouldContinue({ messages, tools }: AgentState) {
 
     // 7.3 Only route to the tool node if the tool call is not a CopilotKit action
     if (!tools || tools.every((tool) => tool.name !== toolCallName)) {
-      return "tool_node"
+      return "tool_node";
     }
   }
 
