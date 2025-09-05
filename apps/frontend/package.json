@@ -19,7 +19,7 @@
     "@angular/forms": "^19.0.0",
     "@angular/platform-browser": "^19.0.0",
     "@angular/platform-browser-dynamic": "^19.0.0",
-    "@copilotkitnext/angular": "0.0.1",
+    "@copilotkitnext/angular": "0.0.6",
     "clsx": "^2.1.1",
     "rxjs": "^7.8.1",
     "tailwind-merge": "^3.3.1",

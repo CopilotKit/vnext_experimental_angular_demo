@@ -82,8 +82,8 @@ importers:
         specifier: ^19.0.0
         version: 19.2.14(@angular/common@19.2.14(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/compiler@19.2.14)(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(@angular/platform-browser@19.2.14(@angular/animations@19.2.14(@angular/common@19.2.14(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1)))(@angular/common@19.2.14(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1)))
       '@copilotkitnext/angular':
-        specifier: 0.0.1
-        version: 0.0.1(@angular/cdk@19.2.19(@angular/common@19.2.14(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/common@19.2.14(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)(tslib@2.8.1)
+        specifier: 0.0.6
+        version: 0.0.6(@angular/cdk@19.2.19(@angular/common@19.2.14(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/common@19.2.14(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)(tslib@2.8.1)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -128,8 +128,8 @@ importers:
         specifier: 0.0.12-alpha.0
         version: 0.0.12-alpha.0(openai@5.18.1(ws@8.18.3)(zod@3.25.75))
       '@copilotkitnext/runtime':
-        specifier: 0.0.2
-        version: 0.0.2(better-sqlite3@12.2.0)(openai@5.18.1(ws@8.18.3)(zod@3.25.75))
+        specifier: 0.0.6
+        version: 0.0.6(better-sqlite3@12.2.0)(openai@5.18.1(ws@8.18.3)(zod@3.25.75))
       '@hono/node-server':
         specifier: ^1.13.6
         version: 1.19.0(hono@4.8.10)
@@ -920,21 +920,21 @@ packages:
   '@copilotkit/shared@1.10.3':
     resolution: {integrity: sha512-LCgqfWfIfC97jCS6AMXVsuCXHK4CUqet7XXKJ9SB8gXR/kiDciP543gtoXznQK6L5ZP5FGDEH0KtPdNd/2Mcgg==}
 
-  '@copilotkitnext/angular@0.0.1':
-    resolution: {integrity: sha512-bhc9EXKM0NDzsPCXtqRZC3mz07X+26fo6n1lBFQnxVXJ5UTTbwMdrW1qQIaW1SpcZbD1zmn7SP5yd1H0fW0S4w==}
+  '@copilotkitnext/angular@0.0.6':
+    resolution: {integrity: sha512-gP+gHDCbcPCajjdipa2g0KL8BSoWt7bvB706ZTjRkgzRDHiC7yS9mRlRFlLSlIz319OhzpoLaEMDuIyFG6TvHg==}
     peerDependencies:
-      '@angular/cdk': ^19.0.0
-      '@angular/common': ^19.0.0
-      '@angular/core': ^19.0.0
+      '@angular/cdk': ^18.0.0 || ^19.0.0
+      '@angular/common': ^18.0.0 || ^19.0.0
+      '@angular/core': ^18.0.0 || ^19.0.0
       rxjs: ^7.8.0
       tslib: ^2.6.0
 
-  '@copilotkitnext/core@0.0.1':
-    resolution: {integrity: sha512-6JeSVPu5D7r/qLTf2OePCqL4xY4UK5UyZbFMjoaXWGRC+OICn6vN+KRI7+Eil2ndaQApOqJ07W+NCADVtYjggQ==}
+  '@copilotkitnext/core@0.0.6':
+    resolution: {integrity: sha512-9W6KvR/nm2wy4OOUzA0NkR6glyvp3prRGpVq1JNaBZMTvdxuEWkYVuNodjDThPimJtTOyiXfd6ot0xivsvu5gQ==}
     engines: {node: '>=18'}
 
-  '@copilotkitnext/runtime@0.0.2':
-    resolution: {integrity: sha512-0QIVrDShbeeyOvWIklZiJIavamEZpfd7E5+HMr5QjHLu8j7EOBv7xUK/1UtFTbBPP6lOekayg/ISSClBK1z9Uw==}
+  '@copilotkitnext/runtime@0.0.6':
+    resolution: {integrity: sha512-ra79V4H8q4gaqH6wA2k6TNHcIKLjfaBWQWCVyxY7HcGF+wKJXFL93JVc+Z2TmtkQUyUKB6dOZBH/aqigMDQ1MQ==}
     engines: {node: '>=18'}
     peerDependencies:
       better-sqlite3: ^12.2.0
@@ -943,12 +943,8 @@ packages:
       better-sqlite3:
         optional: true
 
-  '@copilotkitnext/shared@0.0.1':
-    resolution: {integrity: sha512-4CvsGdLpFQ8mjhhKgh3PKT4NAGqxFg2LcNxGTUsj3rlht2F4i6OmHya4Y/hRAe7OmJ12NJz1MULY7xjKoRIgGw==}
-    engines: {node: '>=18'}
-
-  '@copilotkitnext/shared@0.0.2':
-    resolution: {integrity: sha512-jxz7DR8PKEvb3JeJ9rILiMaXTqRJE6rko7RdtM2l3rApk5J1GzgREV0Kkjo74sBbKzS5dO60yMr3FWPpG/sOfQ==}
+  '@copilotkitnext/shared@0.0.6':
+    resolution: {integrity: sha512-S8mOKH95pAkJsBJx4Os2AmGHQyGWXPv5hBa6do6vWna5NVIxQTixwho7qK96sDoOdCfFPf3wd04DdJryBp0kkQ==}
     engines: {node: '>=18'}
 
   '@discoveryjs/json-ext@0.6.3':
@@ -5225,6 +5221,9 @@ packages:
     resolution: {integrity: sha512-b19dMThMV4HVFynSAM1++gBHAbk2Tc/osgLIBZMKsyqh34jb2e8Os7T6ZW/Bt3pJFdBTd2JwAnAAEQV7rSNvcQ==}
     engines: {node: '>=0.10'}
 
+  tailwind-merge@2.6.0:
+    resolution: {integrity: sha512-P+Vu1qXfzediirmHOC3xKGAYeZtPcV9g76X+xg2FD4tYgR71ewMA35Y3sCz3zhiN/dwefRpJX0yBcgwi1fXNQA==}
+
   tailwind-merge@3.3.1:
     resolution: {integrity: sha512-gBXpgUm/3rp1lMZZrM/w7D8GKqshif0zAymAhbCyIt8KMe+0v9DQ7cdYLR4FHH/cKpdTXb+A/tKKU3eolfsI+g==}
 
@@ -6815,36 +6814,38 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@copilotkitnext/angular@0.0.1(@angular/cdk@19.2.19(@angular/common@19.2.14(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/common@19.2.14(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)(tslib@2.8.1)':
+  '@copilotkitnext/angular@0.0.6(@angular/cdk@19.2.19(@angular/common@19.2.14(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/common@19.2.14(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)(tslib@2.8.1)':
     dependencies:
       '@ag-ui/client': 0.0.36-alpha.1
       '@ag-ui/core': 0.0.36-alpha.1
       '@angular/cdk': 19.2.19(@angular/common@19.2.14(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)
       '@angular/common': 19.2.14(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)
       '@angular/core': 19.2.14(rxjs@7.8.2)(zone.js@0.15.1)
-      '@copilotkitnext/core': 0.0.1
-      '@copilotkitnext/shared': 0.0.1
+      '@copilotkitnext/core': 0.0.6
+      '@copilotkitnext/shared': 0.0.6
+      clsx: 2.1.1
       highlight.js: 11.11.1
       katex: 0.16.22
       lucide-angular: 0.540.0(@angular/common@19.2.14(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))
       marked: 16.2.0
       rxjs: 7.8.2
+      tailwind-merge: 2.6.0
       tslib: 2.8.1
       zod: 3.25.75
 
-  '@copilotkitnext/core@0.0.1':
+  '@copilotkitnext/core@0.0.6':
     dependencies:
       '@ag-ui/client': 0.0.36-alpha.1
-      '@copilotkitnext/shared': 0.0.1
+      '@copilotkitnext/shared': 0.0.6
       rxjs: 7.8.1
       zod: 3.25.75
 
-  '@copilotkitnext/runtime@0.0.2(better-sqlite3@12.2.0)(openai@5.18.1(ws@8.18.3)(zod@3.25.75))':
+  '@copilotkitnext/runtime@0.0.6(better-sqlite3@12.2.0)(openai@5.18.1(ws@8.18.3)(zod@3.25.75))':
     dependencies:
       '@ag-ui/client': 0.0.36-alpha.1
       '@ag-ui/core': 0.0.36-alpha.1
       '@ag-ui/encoder': 0.0.36-alpha.1
-      '@copilotkitnext/shared': 0.0.2
+      '@copilotkitnext/shared': 0.0.6
       hono: 4.8.10
       ioredis: 5.7.0
       kysely: 0.28.5
@@ -6855,12 +6856,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@copilotkitnext/shared@0.0.1':
-    dependencies:
-      partial-json: 0.1.7
-      uuid: 11.1.0
-
-  '@copilotkitnext/shared@0.0.2':
+  '@copilotkitnext/shared@0.0.6':
     dependencies:
       partial-json: 0.1.7
       uuid: 11.1.0
@@ -10847,6 +10843,8 @@ snapshots:
   supports-preserve-symlinks-flag@1.0.0: {}
 
   symbol-observable@4.0.0: {}
+
+  tailwind-merge@2.6.0: {}
 
   tailwind-merge@3.3.1: {}
 

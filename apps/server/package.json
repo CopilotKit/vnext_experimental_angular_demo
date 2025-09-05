@@ -10,7 +10,7 @@
   "dependencies": {
     "@ag-ui/client": "0.0.36-alpha.1",
     "@ag-ui/langgraph": "0.0.12-alpha.0",
-    "@copilotkitnext/runtime": "0.0.2",
+    "@copilotkitnext/runtime": "0.0.6",
     "@hono/node-server": "^1.13.6",
     "better-sqlite3": "^12.2.0",
     "hono": "^4.6.11",
